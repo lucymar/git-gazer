@@ -7,18 +7,14 @@ import Search from './Search';
 import DelayedQuery from './Test';
 import TestSearch from './TestSearch';
 import { Map1 } from './Map';
-import secret from './localSecrets';
-if (process.env.NODE_ENV === 'development') {
-  require('./localSecrets'); // this will mutate the process.env object with your secrets.
-}
+import { API_KEY } from './localSecrets';
 
 console.log('hiiiii', process.env.GITHUB_TOKEN);
 
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
   headers: {
-    authorization: `Bearer `,
-    //Authorization: `bearer ${apiKey}`,
+    authorization: `Bearer ${API_KEY}`,
   },
 });
 
