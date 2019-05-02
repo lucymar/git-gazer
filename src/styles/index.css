@@ -1,0 +1,96 @@
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, sans-serif;
+} */
+
+input {
+  max-width: 500px;
+}
+
+.gray {
+  color: #828282;
+}
+
+.orange {
+  background-color: #ff6600;
+}
+
+.background-gray {
+  background-color: rgb(246, 246, 239);
+}
+
+.f11 {
+  font-size: 11px;
+}
+
+.w85 {
+  width: 85%;
+}
+
+.button {
+  font-family: monospace;
+  font-size: 10pt;
+  color: black;
+  background-color: lightgoldenrodyellow;
+  text-align: center;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border-style: outset;
+  cursor: pointer;
+  max-width: 250px;
+}
+
+#header {
+  padding: 10px;
+  text-align: center;
+  border-radius: 10em;
+  font-size: 50px;
+  font-family: monospace;
+
+  /* background: url(https://previews.123rf.com/images/necnec/necnec1803/necnec180300009/96757071-seamless-pattern-from-a-star-shape-black-stars-on-a-white-background-vector-illustration-.jpg) -30px -30px; */
+  /* -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
+  color: white;
+}
+.description {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5em;
+  font-size: 15px;
+  font-family: monospace;
+  color: lightblue;
+}
+
+* {
+  background-color: #020122;
+}
+
+.search {
+  background-color: #91bfff;
+  padding: 3px;
+  margin: 3px;
+  border-radius: 3em;
+}
+
+.searchComponent {
+  text-align: center;
+  padding: 20px;
+  border-radius: 3em;
+}
+
+.loading {
+  background: black;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+map {
+  background-color: white;
+}
