@@ -19,6 +19,7 @@
 .env.production.local
 config.js
 localSecrets.js
+newMap.js
 
 
 npm-debug.log*

@@ -26,29 +26,6 @@ const GET_DATA = gql`
   }
 `;
 
-// //with variables:
-// // const user = this.props.user;
-// // const repo = this.props.repo;
-
-// const GET_DATA_With_VARIABLES = gql`
-//   {
-//     repository(owner: "facebook", name: "create-react-app") {
-//       forks(last: 5) {
-//         edges {
-//           node {
-//             owner {
-//               login
-//               ... on User {
-//                 location
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
-
 export const Map1 = ({ onLocationGot }) => (
   <Query query={GET_DATA}>
     {({ loading, error, data }) => {
