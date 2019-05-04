@@ -4,7 +4,7 @@ import '../styles/App.css';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import Search from './Search';
-import { Map1 } from './Map';
+//import { Map1 } from './Map';
 import { API_KEY } from './localSecrets';
 import SimpleExample from './leafletMap';
 
@@ -23,7 +23,7 @@ const App = () => (
         Mapping out the power of open-source collaboration… one fork at a time!
       </h4>
       <Search />
-      <Map1 />
+      {/* <Map1 /> */}
     </div>
   </ApolloProvider>
 );

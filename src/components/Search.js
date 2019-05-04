@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ApolloConsumer } from 'react-apollo';
 import gql from 'graphql-tag';
 import Map1 from './Map';
+import Locations from './Locations';
 
 const GET_USER_LOCATIONS = gql`
   query($owner: String!, $name: String!) {
@@ -22,11 +23,11 @@ const GET_USER_LOCATIONS = gql`
   }
 `;
 
-class TestSearch extends Component {
+class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      locations: null,
+      locations: [],
       user: '',
       repo: '',
       clicked: false,
@@ -35,14 +36,18 @@ class TestSearch extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  onDataGotten = city =>
-    this.setState({
-      locations: this.state.locations,
-      city,
-    });
+  // onDataGotten = city =>
+  //   this.setState({
+  //     locations: this.state.locations
+  //   });
 
-  // onDataGotten = cities =>
-  //   this.setState(() => ({ locations: this.state.locations, cities }));
+  onDataGotten = city => {
+    console.log(city);
+    const joined = this.state.locations.concat(city);
+    this.setState({
+      locations: joined,
+    });
+  };
 
   handleInputChange = evt => {
     this.setState({
@@ -92,11 +97,11 @@ class TestSearch extends Component {
                       },
                       fetchPolicy: 'no-cache',
                     });
-                    console.log('data locations', data.repository.forks.edges);
+                    // console.log('data locations', data.repository.forks.edges);
                     const usersArray = data.repository.forks.edges;
                     usersArray.map(user => {
-                      if (user.node.owner.location)
-                        console.log('location', user.node.owner.location);
+                      // if (user.node.owner.location)
+                      //   console.log('location', user.node.owner.location);
                       if (user.node.owner.location)
                         this.onDataGotten(user.node.owner.location);
                     });
@@ -110,12 +115,12 @@ class TestSearch extends Component {
             )}
           </ApolloConsumer>
         </form>
-        {/* {
-          this.state.clicked === true ? <Map1 locations={this.state.locations}/>
-        } */}
+        {this.state.locations.length > 1 ? (
+          <Locations locations={this.state.locations} />
+        ) : null}
       </div>
     );
   }
 }
 
-export default TestSearch;
+export default Search;

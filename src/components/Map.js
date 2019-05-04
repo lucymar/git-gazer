@@ -7,35 +7,35 @@ import Map from 'mapbox-gl';
 const mapboxgl = require('mapbox-gl');
 //const buildMarker = require('./marker.js');
 
-const GET_DATA = gql`
-  {
-    repository(owner: "facebook", name: "create-react-app") {
-      forks(last: 5) {
-        edges {
-          node {
-            owner {
-              login
-              ... on User {
-                location
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// const GET_DATA = gql`
+//   {
+//     repository(owner: "facebook", name: "create-react-app") {
+//       forks(last: 5) {
+//         edges {
+//           node {
+//             owner {
+//               login
+//               ... on User {
+//                 location
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
-export const Map1 = ({ onLocationGot }) => (
-  <Query query={GET_DATA}>
-    {({ loading, error, data }) => {
-      if (loading) return 'loading...';
-      if (error) return `Error! ${error.message}`;
-      console.log('this is being sentn from the map component', data);
-      return <div>data goes here</div>;
-    }}
-  </Query>
-);
+// export const Map1 = ({ onLocationGot }) => (
+//   <Query query={GET_DATA}>
+//     {({ loading, error, data }) => {
+//       if (loading) return 'loading...';
+//       if (error) return `Error! ${error.message}`;
+//       console.log('this is being sentn from the map component', data);
+//       return <div>data goes here</div>;
+//     }}
+//   </Query>
+// );
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoibHVjeW1hciIsImEiOiJjanQ0ajFoeWMwZDEwNDRwaGlwM2F3M3A2In0.uHXTEtSC78BHunbaDzaDFA';

@@ -97,4 +97,19 @@ map {
 
 .cities {
   color: white;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+.statement {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5em;
+  font-size: 15px;
+  font-family: monospace;
+  color: white;
+}
+
+.container {
+  display: flex;
 }
