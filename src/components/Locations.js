@@ -5,11 +5,13 @@ function Locations(props) {
     <div>
       <h3 className="statement">This repo has been forked in: </h3>
       <div className="container">
-        {props.locations.map((city, index) => (
-          <div key={index}>
-            <p className="cities">{city}</p>
-          </div>
-        ))}
+        <ul>
+          {props.locations.map((city, index) => (
+            <div key={index}>
+              <li className="cities">{city}</li>
+            </div>
+          ))}
+        </ul>
       </div>
     </div>
   );

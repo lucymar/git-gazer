@@ -102,6 +102,7 @@ map {
   margin: 5px;
   justify-content: center;
   flex-wrap: wrap;
+  flex-basis: 1;
 }
 
 .statement {
@@ -116,4 +117,5 @@ map {
 .container {
   display: flex;
   max-width: 758px;
+  position: relative;
 }
