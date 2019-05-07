@@ -91,8 +91,9 @@ input {
   transform: translate(-50%, -50%);
 }
 
-map {
+.map {
   background-color: white;
+  position: relative;
 }
 
 .cities {

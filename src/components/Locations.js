@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Map from './Map';
 
 function Locations(props) {
   return (
@@ -13,6 +14,7 @@ function Locations(props) {
           ))}
         </ul>
       </div>
+      <Map />
     </div>
   );
 }
