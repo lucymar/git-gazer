@@ -99,7 +99,7 @@ input {
 .cities {
   color: white;
   padding: 5px;
-  font-size: 9px;
+  font-size: 12px;
   margin: 5px;
   justify-content: center;
   flex-wrap: wrap;
@@ -116,7 +116,11 @@ input {
 }
 
 .container {
+  margin: auto;
   display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   max-width: 758px;
   position: relative;
 }

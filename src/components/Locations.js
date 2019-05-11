@@ -4,16 +4,19 @@ import Map from './Map';
 function Locations(props) {
   return (
     <div>
-      <h3 className="statement">This repo has been forked in: </h3>
-      <div className="container">
-        <ul>
+      <h3 className="statement">
+        This repo has been forked in the following locations:{' '}
+      </h3>
+      <div>
+        <div className="container">
           {props.locations.map((city, index) => (
-            <div key={index}>
-              <li className="cities">{city}</li>
+            <div className="city" key={index}>
+              <p className="cities">{city}</p>
             </div>
           ))}
-        </ul>
+        </div>
       </div>
+      >
       <Map />
     </div>
   );
