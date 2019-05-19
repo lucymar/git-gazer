@@ -14,5 +14,6 @@ Given a github user and repository name, git-gazer will fetch the locations of a
 
 ### `npm run build`
 
-![git-gazer-screen-shot](PHOTO-2019-04-29-10-29-29.jpg)
+![git-gazer-screen-shot](gitGazer.jpg)
+
 
