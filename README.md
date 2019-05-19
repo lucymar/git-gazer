@@ -12,8 +12,7 @@ Inspired by the so-called 'star-gazers' of Github, this app visually shows the p
 
 Given a github user and repository name, git-gazer will fetch the locations of all repositories that have been built off of the given repo.
 
-### `npm run build`
 
-![git-gazer-screen-shot](gitGazer.jpg)
+![git-gazer-screen-shot](/Users/lucymar/Desktop/stackathon/stackathon/public/gitGazer.jpg)
 
 
