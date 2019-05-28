@@ -10,9 +10,9 @@ Inspired by the so-called 'star-gazers' of Github, this app visually shows the p
 
 ### `How`
 
-Given a github user and repository name, git-gazer will fetch the locations of all repositories that have been built off of the given repo.
+Given a github user and repository name, git-gazer will fetch the locations of all repositories that have been developed from the given repo.
 
 
-![git-gazer-screen-shot](public/gitGazer.jpg)
+![git-gazer-screen](public/gitGazer.jpg)
 
 
