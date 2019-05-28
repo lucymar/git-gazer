@@ -36,11 +36,6 @@ class Search extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // onDataGotten = city =>
-  //   this.setState({
-  //     locations: this.state.locations
-  //   });
-
   onDataRetrieved = city => {
     console.log(city);
     const joined = this.state.locations.concat(city);
@@ -55,8 +50,6 @@ class Search extends Component {
     });
   };
   handleSubmit(evt) {
-    //evt.preventDefault();
-    //make query to apollo client
     this.setState({
       clicked: true,
     });
@@ -97,11 +90,9 @@ class Search extends Component {
                       },
                       fetchPolicy: 'no-cache',
                     });
-                    // console.log('data locations', data.repository.forks.edges);
+
                     const usersArray = data.repository.forks.edges;
                     usersArray.map(user => {
-                      // if (user.node.owner.location)
-                      //   console.log('location', user.node.owner.location);
                       if (user.node.owner.location)
                         this.onDataRetrieved(user.node.owner.location);
                     });
