@@ -53,18 +53,15 @@ class Map extends Component {
 
   render() {
     return (
-      <ReactMapGL
-        ref={this.mapRef}
-        {...this.state.viewport}
-        onViewportChange={this.handleViewportChange}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
-      >
-        <Geocoder
+      <div>
+        <Geocoder />
+        <ReactMapGL
           ref={this.mapRef}
-          onViewportChange={this.handleGeocoderViewportChange}
+          {...this.state.viewport}
+          onViewportChange={this.handleViewportChange}
           mapboxApiAccessToken={MAPBOX_TOKEN}
         />
-      </ReactMapGL>
+      </div>
     );
   }
 }
