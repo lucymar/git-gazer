@@ -17,7 +17,7 @@ function Locations(props) {
         </div>
       </div>
       >
-      <Map />
+      <Map locations={props.locations} />
     </div>
   );
 }
