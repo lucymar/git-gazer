@@ -23,7 +23,7 @@ const App = () => (
         Mapping out the power of open-source collaboration… one fork at a time!
       </h4>
       <Search />
-      <Map />
+      {/* <Map /> */}
     </div>
   </ApolloProvider>
 );

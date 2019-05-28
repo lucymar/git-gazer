@@ -41,7 +41,7 @@ class Search extends Component {
   //     locations: this.state.locations
   //   });
 
-  onDataGotten = city => {
+  onDataRetrieved = city => {
     console.log(city);
     const joined = this.state.locations.concat(city);
     this.setState({
@@ -103,7 +103,7 @@ class Search extends Component {
                       // if (user.node.owner.location)
                       //   console.log('location', user.node.owner.location);
                       if (user.node.owner.location)
-                        this.onDataGotten(user.node.owner.location);
+                        this.onDataRetrieved(user.node.owner.location);
                     });
 
                     this.handleSubmit();

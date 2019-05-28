@@ -13,6 +13,7 @@
     "react-leaflet": "^2.2.1",
     "react-loader-spinner": "^2.3.0",
     "react-map-gl": "^4.1.2",
+    "react-map-gl-geocoder": "^2.0.5",
     "react-scripts": "3.0.0",
     "rebass": "^3.0.0-12",
     "typescript": "^3.4.5"
